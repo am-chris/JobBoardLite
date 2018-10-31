@@ -10481,3 +10481,33 @@ a.text-dark:focus {
   margin-bottom: 0;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.new-job-banner {
+  background-color: #38c172;
+  text-align: center;
+  color: #FFF;
+  padding: 2px 0;
+  margin-bottom: 20px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.job-masonry {
+  background-color: #FFF;
+  border: 1px solid #EEE;
+}
+

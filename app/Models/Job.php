@@ -14,4 +14,15 @@ class Job extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    // Scopes
+    public function scopeLatest()
+    {
+        return $this->orderBy('created_at', 'desc');
+    }
+
+    public function scopeVisible()
+    {
+        return $this->where('visible', true);
+    }
 }
