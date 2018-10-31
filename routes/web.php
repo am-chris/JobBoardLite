@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('jobs/create', 'JobController@create')->name('jobs.create');
+    Route::post('jobs', 'JobController@store')->name('jobs.store');
+    Route::put('jobs/{job}', 'JobController@update')->name('jobs.update');
+    Route::get('jobs/{job}', 'JobController@show')->name('jobs.show');
+    Route::get('jobs/{job}/edit', 'JobController@edit')->name('jobs.edit');
+});
